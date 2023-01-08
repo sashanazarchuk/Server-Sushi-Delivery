@@ -31,7 +31,7 @@ builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddCors(options => options.AddPolicy(name: "NgOrigins",
     policy =>
     {
-        policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+        policy.WithOrigins("http://localhost:4200", "https://lemon-rock-065210c10.2.azurestaticapps.net").AllowAnyMethod().AllowAnyHeader();
     }
     ));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
